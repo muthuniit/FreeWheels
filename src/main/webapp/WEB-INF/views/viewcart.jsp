@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="<c:url value="/Images/css/screen.css" />" />
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-1.6.4.min.js" />"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <style>
 #jumbo {
   margin-bottom: auto;
@@ -29,20 +31,15 @@
     </c:if>
     
     <c:if test="${emptycart=='notempty'}">
-    
+    <br>
      <div class="container">
  		<br>
- 		<div class="row jumbotron">
- 		
- 		<h3>Your Cart </h3>
+ 		<h3>Your Cart:</h3>
  		</div>
  		<br>
  		
- 	</div>
- 	
  	<div class="container">
-<br>
-<br>
+
 
 <div ng-app ="mainApp" ng-controller="productController">
 <div class="table-responsive">
@@ -60,28 +57,32 @@
    		
    			<tr ng-repeat="p in productlist">
    			
-   			<td>{{p.productName}}</td>
-   			<td>{{p.category}}</td>
-   			<td>Rs. {{p.price}}</td>
+   			<td>{{p.product.productName}}</td>
+   			<td>{{p.product.category}}</td>
+   			<td>Rs. {{p.product.price}}</td>
    			<td>{{p.quantity}}</td>
    			<td>Rs. {{p.totalPrice}}</td>
    			
-   			</tr>
+   			
+      			</tr>
    			</tbody>
   </table>
 	
 </div>
-	<h4>Grand total = Rs. ${grandtotal}</h4>
+<br>
+	
+	<h4>Grand total = Rs. <c:out value="${grandtotal }"></c:out></h4>
 </div>
  </div>
- <center> <a href="<spring:url value="/checkout" />" class="btn btn-success">
- <span class="glyphicon glyphicon-shopping-cart"></span> Check out</a></center>
- 
- <script>
+ <br><br>
+ <center> <a href="cart_checkout" class="btn btn-success btn-lg">
+ <span class="glyphicon glyphicon-shopping-cart"></span> Check out</a></center> 
+  
+<script>
 		var mainApp = angular.module("mainApp", []);
 		mainApp.controller("productController", function($scope) {
 
-			var json = '${products}';
+			var json = '${cartitems}';
 			var products = JSON.parse(json);
 			$scope.productlist = products;
 
@@ -96,4 +97,6 @@
   <%@include file="footer.jsp"%>
 </body>
 </html>
+
+
 

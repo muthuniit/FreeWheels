@@ -21,7 +21,7 @@ public class productdaoimpl implements productdao{
 @Autowired
 private SessionFactory sessionFactory;
 
-	@SuppressWarnings({ "deprecation", "unchecked" })
+	@SuppressWarnings({ "unchecked" })
 	
 	public List<Product> getAllProducts() {
 		List<Product> products = null;
@@ -47,7 +47,7 @@ tx.commit();
 		return null;
 	}
 
-	@SuppressWarnings({ "deprecation", "rawtypes" })
+	@SuppressWarnings({ "rawtypes" })
 	public Product getprodbyid(int id) {
 		Session session=sessionFactory.openSession();
 		Transaction tx=null;
@@ -82,12 +82,36 @@ tx.commit();
 		
 	}
 
-	public void deleteprod(Product prod) {
-		// TODO Auto-generated method stub
+	public void deleteprod(int id) {
+		Session session=this.sessionFactory.openSession();
+		Transaction tx=null;
+		Product prod=getprodbyid(id);
 		
-	}
+	
+		try
+		{
+			tx=session.beginTransaction();
+			session.delete(prod);
+			tx.commit();
+		}
+		catch(HibernateException e)
+		{
+			if(tx!=null)
+			{
+				tx.rollback();
+			}
+			
+			e.printStackTrace();
+		}
+		
+		finally
+		{
+			session.close();
+		}
 
-	@SuppressWarnings({ "unchecked", "deprecation" })
+	}
+		
+	@SuppressWarnings({ "unchecked" })
 	public List<Product> getProductByCategory(String category) 
 	{
 		List<Product> products=null;

@@ -39,8 +39,8 @@ public class productserviceimpl implements productservice{
 		
 	}
 
-	public void delete(Product prod) {
-		// TODO Auto-generated method stub
+	public void delete(int id) {
+		newprod.deleteprod(id);
 		
 	}
 	

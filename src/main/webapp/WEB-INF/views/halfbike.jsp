@@ -31,7 +31,8 @@
 				<h4>Category: {{p.category}}</h4>
 				<h4>Rs.{{p.price}}</h4>
 				
-				<button type="button" class="btn btn-primary btn-lg">Add to Cart</button>
+		<a href="addtocart?productid={{p.id}}" class="btn btn-primary btn-lg">Add to Cart</a>		
+				
 			</div>
 			</div></div></div>
 		</div>

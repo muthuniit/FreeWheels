@@ -25,7 +25,11 @@ public class FrontController {
 	{
 		return new ModelAndView("login");
 	}
-	
+	@RequestMapping("/usererror")
+	public ModelAndView err()
+	{
+		return new ModelAndView("usererror");
+	}
 	@RequestMapping("/about")
 	public ModelAndView us()
 	{

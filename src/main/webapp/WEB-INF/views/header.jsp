@@ -18,7 +18,7 @@
 }
 
 h2 {
-	font-family: "verdana", Times, serif;
+	font-family: "verdana";
 	text-indent: 50px;
 }
 </style>
@@ -86,6 +86,7 @@ h2 {
       <li><a href="hybridbike">Hybrid Bike</a></li>
       <li><a href="halfbike">Half Bike</a></li>
     </ul>
+    <li><a href="pdcontrol">Product List</a></li>
     <c:if test="${empty cartObj }">
     			<li><a href="viewcart">
 	<span class=" glyphicon glyphicon-shopping-cart">Cart(0)</span></a></li>

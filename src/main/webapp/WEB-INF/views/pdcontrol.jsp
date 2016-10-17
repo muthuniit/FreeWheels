@@ -54,6 +54,7 @@
 						<th>Remaining pieces</th>
 						<th>Supplier</th>
 						<th>Image</th>
+						<th>Modify Products</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -66,6 +67,8 @@
 						<td>{{p.quantity}}</td>
 						<td>{{p.supplier}}</td>
 						<td>{{p.image}}</td>
+	<td><a href="deleteprod?productid={{p.id}}" title="delete">
+	<span class="glyphicon glyphicon-trash"></span></a> </td>		 
 					</tr>
 				</tbody>
 			</table>

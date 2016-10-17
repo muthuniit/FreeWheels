@@ -86,7 +86,7 @@ HttpSession session;
 				}
 				
 		}
-		cart.getGrandTotal();
+		cart.calcGrandTotal();
 		cart.setCartCount(cart.getCartCount()+1);
 		model.addAttribute("cartObj",cart);
 	
@@ -97,7 +97,7 @@ HttpSession session;
 	public ModelAndView viewCart(Model model)
 	{
 		Cart cart=(Cart) session.getAttribute("cartObj");
-
+		
 		if(cart==null|| cart.getCartCount()==0)
 		{
 			model.addAttribute("emptycart","emptycart");
@@ -106,7 +106,7 @@ HttpSession session;
 		{
 			model.addAttribute("emptycart", "notempty");
 			model.addAttribute("grandtotal", cart.getGrandTotal());
-		
+			System.out.println(cart.getGrandTotal());
 			ObjectMapper mapper = new ObjectMapper();
 			List<CartItem> cartitems= cart.getCartItems();
 			

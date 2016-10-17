@@ -14,7 +14,7 @@ public 	List<Product> getAllProducts();
    public Product getprodbyid(int id);
    List<Product> getProductByCategory(String category);
    public void updateprod(Product prod);
-   public void deleteprod(Product prod);
+   public void deleteprod(int id);
 }
 
 

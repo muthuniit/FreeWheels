@@ -12,7 +12,7 @@
 
 		<intercept-url pattern="/pdcontrol**" access="hasRole('ROLE_ADMIN')" />
 		<!-- access denied page -->
-		<access-denied-handler error-page="/login" />
+		<access-denied-handler error-page="/usererror" />
 
 		<form-login
 		    login-page="/login"

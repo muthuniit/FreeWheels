@@ -42,7 +42,7 @@ public class ProductController {
 		MultipartFile picture=p.getPicture();
 		System.out.println(picture.getOriginalFilename());
 		try {
-			picture.transferTo(new File("C://Users/Welcome/workspace/eco/eco/src/main/webapp/Image/Img/"+picture.getOriginalFilename()));
+picture.transferTo(new File("D://GitHub/eco/eco/src/main/webapp/Image/Img/"+picture.getOriginalFilename()));
 		} catch (IllegalStateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

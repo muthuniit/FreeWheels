@@ -4,14 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+h4 {
+	font-family: "verdana";
+	text-indent: 500px;
+}
+</style>
 </head>
 <body>
 
 
 <div class="navbar navbar-inverse" style="border-radius:0px;">
   <div class="navbar-text">
-  <font color="white">
-        Follow us @ <br><br><br>
+  <h4 class="text-primary"><b>Free Wheels</b></h4>  
+<font color="white">
+
+                 India    Brazil    China    Japan    United Kingdom<br>
+                 © 2016 FreeWheels, Inc.
         </font></div></div>
         </body>
 </html>

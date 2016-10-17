@@ -33,6 +33,19 @@ public class Cart implements Serializable {
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	} 
+
+	public void calcGrandTotal()
+	{
+		double tot=0;
+		
+		for(int i=0;i<cartItems.size();i++)
+		{
+			tot+=cartItems.get(i).getTotalPrice();
+		}
+		this.grandTotal=tot;
+		
+	}
+
 }
 
 
