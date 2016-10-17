@@ -32,49 +32,49 @@
 						
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="doornumber">Door Number</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 								<form:input type="text" path="doornumber"  class="form-control" id="doornumber" />
 								</div>
 							</div>
 								<br>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="streetname">Street Name</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 									<form:input type="text" path="streetname" class="form-control" name="streetname" id="streetname" />
 								</div>
 							</div>
 							<br>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="city">City</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 									<form:input type="text" path="city" class="form-control" name="city" id="city" />
 								</div>
 							</div>
 							<br>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="state">State</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 									<form:input type="text" path="state" class="form-control" name="state" id="state" />
 								</div>
 							</div>
 							<br>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="zipcode">Zipcode</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 									<form:input type="text" path="zipcode" class="form-control" name="zipcode" id="zipcode" />
 								</div>
 							</div>
 							<br>
 							<div class="form-group">
 								<label class="control-label col-sm-2" for="contactnumber">Contact Number</label>
-								<div class="col-sm-9">
+								<div class="col-sm-5">
 									<form:input type="text" path="contactnumber" class="form-control" name="contactnumber" id="contactnumber" />
 								</div>
 							</div>
 							<br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="payment">Payment Option</label>
-						<div class="col-sm-9">
+						<div class="col-sm-5">
 						<form:select name="payment" path="payment"  class="form-control" id="payment">
          
          	    			<option value="credit">Credit Card</option>

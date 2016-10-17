@@ -15,21 +15,22 @@
 	<%@include file="header.jsp"%>
 	<br>
 	<br>
-	
+	<h4 class="text-primary; lead"><strong><em>Half Bikes </em></strong></h4>
+	<br>
 	<div ng-app ="mainApp" ng-controller="productController">
 	<div class="container" id="product-section">
  	  <div class="row" ng-repeat="p in productlist">
    		<div class="col-md-6">
 		<img src="<c:url value="/Image/Img/{{p.image}}"/>"
-				class="img-thumbnail" alt="Cinque Terre" width="250px" height="236px"/>	
+				class="img-thumbnail" alt="Cinque Terre" width="450px" height="300px"/>	
 				</div>
 			<div class="col-md-6">
     		<div class="row">
   			<div class="col-md-12">
-				<h3>{{p.productName}}</h3>
+				<h3><em>{{p.productName}}</em></h3>
 				<h5>{{p.description}}</h5>
-				<h4>Category: {{p.category}}</h4>
-				<h4>Rs.{{p.price}}</h4>
+				<h3>Product of : {{p.supplier}}</h3>
+				<h4><em>Rs.{{p.price}}</em></h4>
 				
 		<a href="addtocart?productid={{p.id}}" class="btn btn-primary btn-lg">Add to Cart</a>		
 				

@@ -71,9 +71,9 @@
         	<h2><c:out value="${successmg }"></c:out></h2>
         </c:if>
         
-
+</div>
 <br>
 <%@include file="footer.jsp"%>
-</div>
+
 </body>
 </html>

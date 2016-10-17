@@ -13,12 +13,13 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
-<br>
+<br><br>
 <div class="container">
-<h2>Thank You for placing you order!!!!!!</h2>
-<h3>You can expect to receive your order within 3-5 Working days.</h3>
+			<div class="alert alert-success" role="alert">
+ <h2>Thanks for your interest at FreeWheels!!!</h2>
+<h3>Your order will be shipped within 3 business days.</h3>
 <br>
-<br>
+<br></div>
 <br>
 <br>
 <br>

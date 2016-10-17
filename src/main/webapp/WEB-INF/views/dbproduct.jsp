@@ -19,13 +19,13 @@
 	<div class="row" ng-repeat="p in productlist" >
 		<div class="col-md-4" >
 		<img src="<c:url value="/Image/Img/{{p.image}}"/>"
-				class="img-thumbnail" alt="Cinque Terre" width="250px" height="236px"/>	
+				class="img-thumbnail" alt="Cinque Terre" width="400px" height="240px"/>	
 				</div>
 			<div class="col-md-8">
-				<h3>{{p.productName}}</h3>
+				<h3><em>{{p.productName}}</em></h3>
 				<p>{{p.description}}</p>
 				<h4>Category: {{p.category}}</h4>
-				<h4>Rs.{{p.price}}</h4>
+				<h4><em>Rs.{{p.price}}</em></h4>
 	<a href="addtocart?productid={{p.id}}" class="btn btn-primary btn-lg">Add to Cart</a>
 				
 	

@@ -10,7 +10,8 @@
     
     <http auto-config="true" use-expressions="true">
 
-		<intercept-url pattern="/pdcontrol**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/pdcontrol" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/Product" access="hasRole('ROLE_ADMIN')" />
 		<!-- access denied page -->
 		<access-denied-handler error-page="/usererror" />
 
